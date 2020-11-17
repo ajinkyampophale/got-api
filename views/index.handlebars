@@ -3,13 +3,13 @@
   <h1>Welcome to Game Of Thrones Battle API</h1>
   <br><br>
 
-  <a href="http://localhost:3000/list" target="_blank" style="font-size: 30px;">List</a>
+  <a href="/list" target="_blank" style="font-size: 30px;">List</a>
   <br><br>
   
-  <a href="http://localhost:3000/count" target="_blank" style="font-size: 30px;">Count</a>
+  <a href="/count" target="_blank" style="font-size: 30px;">Count</a>
   <br><br>
 
-  <a href="http://localhost:3000/stats" target="_blank" style="font-size: 30px;">Stats</a>
+  <a href="/stats" target="_blank" style="font-size: 30px;">Stats</a>
   <br><br>
 
   <a href="javascript:void(0);" onclick="showHideField();" style="font-size: 30px;">Search</a>
@@ -63,7 +63,7 @@
       searchArray.push(`type=${type}`);
     }
 
-    const link = `http://localhost:3000/search?${searchArray.join('&')}`;
+    const link = `/search?${searchArray.join('&')}`;
     window.open(link, '_blank');
   }
 
