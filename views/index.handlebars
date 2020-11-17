@@ -1,0 +1,70 @@
+<center>
+
+  <h1>Welcome to Game Of Thrones Battle API</h1>
+  <br><br>
+
+  <a href="http://localhost:3000/list" target="_blank" style="font-size: 30px;">List</a>
+  <br><br>
+  
+  <a href="http://localhost:3000/count" target="_blank" style="font-size: 30px;">Count</a>
+  <br><br>
+
+  <a href="http://localhost:3000/stats" target="_blank" style="font-size: 30px;">Stats</a>
+  <br><br>
+
+  <a href="javascript:void(0);" onclick="showHideField();" style="font-size: 30px;">Search</a>
+  <br><br>
+
+  <div id="search-div" style="display: none;">
+    <form>
+      <input type="text" id="king" name="king" placeholder="King">
+      <br><br>
+
+      <input type="text" id="location" name="location" placeholder="Location">
+      <br><br>
+
+      <input type="text" id="type" name="type" placeholder="Type">
+      <br><br>
+
+      <button type="button" onclick="redirectSearch();">Search</button>
+    </form>
+  </div>
+
+</center>
+
+<script>
+
+  const showHideField = () => {
+    const ele = document.getElementById('search-div');
+    if(ele.style.display === 'none'){
+      ele.style.display = 'block';
+    }
+    else{
+      ele.style.display = 'none';
+    }
+  }
+
+  const redirectSearch = () => {
+    const king = document.getElementById('king').value;
+    const location = document.getElementById('location').value;
+    const type = document.getElementById('type').value;
+
+    const searchArray = [];
+
+    if(king){
+      searchArray.push(`king=${king}`);
+    }
+
+    if(location){
+      searchArray.push(`location=${location}`);
+    }
+
+    if(type){
+      searchArray.push(`type=${type}`);
+    }
+
+    const link = `http://localhost:3000/search?${searchArray.join('&')}`;
+    window.open(link, '_blank');
+  }
+
+</script>
