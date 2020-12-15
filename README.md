@@ -13,9 +13,9 @@ Steps To Run:
   1. Clone the project and install the dependencies (change directory (cd) to the folder where you have cloned the project and run "npm install" command).
 
   2. Specify environment variables:
-    1. MONGODB_URI (Mongodb connection string. Default is 'mongodb://localhost:27017/got').
-    2. PORT (Default is 5000).
-    3. eg: MONGODB_URI='mongodb://localhost:27017/got' PORT=5003 node index.js
+  a. MONGODB_URI (Mongodb connection string. Default is 'mongodb://localhost:27017/got').
+  b. PORT (Default is 5000).
+  (eg: MONGODB_URI='mongodb://localhost:27017/got' PORT=5003 node index.js)
     
     Or you can change the default options in index.js file.
    
