@@ -19,9 +19,9 @@ Steps To Run:
     
     Or you can change the default options in index.js file.
    
-  3. Start mongodb server and run "npm run dev" or "node index.js" command.
+  3. Start mongodb server. You can optionally import the sample dataset located in sample-dataset folder using battle.json file.
   
-  4. That's it now you will have the application running on specified port you can test using postman.
+  4. That's it now run "npm run dev" or "node index.js" command and you will have the application running on specified port you can test using postman.
 
 
 Build With:
